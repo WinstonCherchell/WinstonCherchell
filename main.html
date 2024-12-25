@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Darck Warrior</title>
+  <style>
+    /* Общие стили для страницы */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background-color: #2c2c2c;
+      color: #fff;
+      line-height: 1.6;
+    }
+
+    header {
+      text-align: center;
+      background-color: #333333;
+      padding: 20px 0;
+      border-bottom: 2px solid #ffca28;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      color: #ffca28;
+      margin: 0;
+    }
+
+    header h3 {
+      font-size: 1.2rem;
+      color: #bdbdbd;
+      margin: 10px 0 0;
+    }
+
+    .text {
+      margin: 20px auto;
+      padding: 20px;
+      max-width: 800px;
+      background-color: #3d3d3d;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .text p {
+      font-size: 1.1rem;
+      color: #e0e0e0;
+    }
+
+    .text h6 {
+      margin-top: 20px;
+      font-size: 0.9rem;
+      font-style: italic;
+      color: #bdbdbd;
+      text-align: right;
+    }
+
+    .motivation h1 {
+      font-size: 2rem;
+      color: #ffca28;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .motivation p {
+      font-size: 1rem;
+      color: #e0e0e0;
+      text-align: justify;
+      margin: 0 auto;
+      max-width: 700px;
+    }
+
+    footer {
+      text-align: center;
+      background-color: #212121;
+      padding: 10px 0;
+      margin-top: 20px;
+      border-top: 2px solid #ffca28;
+    }
+
+    footer p {
+      font-size: 0.9rem;
+      color: #bdbdbd;
+      margin: 0;
+    }
+
+    /* Стили для aside */
+    aside {
+      position: fixed;
+      top: 0;
+      left: -300px;
+      width: 300px;
+      height: 100%;
+      background-color: #444444;
+      box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+      overflow-y: auto;
+      transition: left 0.3s ease;
+      padding: 20px;
+    }
+
+    aside.open {
+      left: 0;
+    }
+
+    aside h2 {
+      font-size: 1.5rem;
+      color: #ffca28;
+      margin-top: 0;
+    }
+
+    aside p {
+      font-size: 1rem;
+      color: #e0e0e0;
+      margin-top: 20px;
+      cursor: pointer;
+    }
+
+    .toggle-btn {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      background-color: #ffca28;
+      color: #000;
+      border: none;
+      padding: 5px 10px;
+      cursor: pointer;
+      font-size: 0.9rem;
+      border-radius: 5px;
+      z-index: 1000;
+    }
+
+    .toggle-btn:hover {
+      background-color: #ffd95e;
+    }
+
+    /* Адаптация для мобильных устройств */
+    @media (max-width: 768px) {
+      .toggle-btn {
+        padding: 3px 8px;
+        font-size: 0.7rem;
+      }
+
+      aside {
+        width: 250px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Кнопка для открытия и закрытия aside -->
+  <button class="toggle-btn" onclick="toggleAside()">Меню</button>
+
+  <!-- Верхняя часть сайта -->
+  <header>
+    <h1>Darck Warrior</h1>
+    <h3>Гвардия Черных Рыцарей</h3>
+  </header>
+
+  <!-- Текстовый блок -->
+  <div class="text">
+    <p>
+      У всех у кого есть вопросы зачем мы это делаем то есть
+      Бегаем на тренировке с игрушечными автоматиками
+      Это все надо для прокачки физической подготовки и если вдруг Одессу оккупируют с двух сторон с преднестровье и с
+      Крыма что бы каждый мог за себя постоять в экстремальных условиях и знал что нужно было делать а не боялся каждого
+      шороха из-за кустов
+    </p>
+    <h6>Слова: Капитан-Виндикл</h6>
+  </div>
+
+  <!-- Мотивационный блок -->
+  <div class="mainContent">
+    <div class="text motivation">
+      <h1>Слушай сюда</h1>
+      <p>
+        Мы здесь не для того, чтобы жалеть себя. Мы здесь не для того, чтобы быть слабыми, ныть и искать легкие пути.
+        Боль — это ваш друг. Пот — это ваш союзник. Страдание — это ваш наставник. Каждый, кто боится боли, уже проиграл.
+        Каждый, кто ищет комфорта, никогда не станет великим.
+        <br><br>
+        Дэвид Гоггинс? Этот человек превратил боль в топливо. Он говорил: "Когда ты думаешь, что на пределе, ты использовал всего 40% своего потенциала". Ты слышал? Всего сорок процентов! Пока другие ломаются, он идет дальше. Вы хотите быть такими, как он? Тогда начните обнимать боль, а не убегать от неё.
+        <br><br>
+        Посмотрите на морских котиков. Эти люди проходят через адскую неделю, где каждый день — это битва. Но знаете, почему они выживают? Потому что их разум сильнее их тела. Они не жалеют себя. Они не думают о боли. Они знают, что страдания делают их непобедимыми.
+        <br><br>
+        Майк Тайсон? Он не стал чемпионом потому, что был талантлив. Он стал чемпионом потому, что бил сильнее и тренировался жестче, чем любой другой. "Все сильны, пока не получат первый удар в лицо", — говорил он. Вот вопрос: а вы готовы выдержать этот удар?
+        <br><br>
+        Вы хотите быть великими? Забудьте о жалости к себе. Забудьте о комфорте. Забудьте о страхе. Это слабость, и слабости нет места в этом зале. Каждый раз, когда вы чувствуете, что больше не можете, знайте: это именно тот момент, когда вы становитесь сильнее.
+        <br><br>
+        Каждое отжимание, каждый бег, каждый удар — это не просто упражнение. Это война. Это война с самим собой, со своей слабостью. И вы обязаны победить. Здесь нет места слабым. Здесь нет места тем, кто сдается.
+        <br><br>
+        Вы хотите быть мужчинами? Тогда докажите это! Вы хотите быть великими? Тогда примите боль. Боль — это путь. Боль — это ваша трансформация. Здесь ковка, здесь огонь, здесь закалка. Вы либо выйдете отсюда как сталь, либо сломаетесь как пластик.
+        <br><br>
+        Сейчас не время жаловаться. Сейчас время становиться теми, кто вы должны быть. Сожмите зубы, поднимите свою задницу и начинайте работать. Потому что мир принадлежит не слабым, а тем, кто готов страдать, чтобы победить.
+      </p>
+    </div>
+  </div>
+
+  <!-- Боковая панель -->
+  <aside id="sidebar">
+    <h2>О Участниках</h2>
+    <p>Виндикл</p>
+    <p>Смит</p>
+    <p>Черчель</p>
+    <p>Белка</p>
+    <p>Швеп</p>
+    <p>Сокол</p>
+    <p>Ведьма</p>
+    <p>Вареник</p>
+  </aside>
+
+  <!-- Подвал -->
+  <footer>
+    <p>© 2024 Darck Warrior. Все права защищены.</p>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    function toggleAside() {
+      const aside = document.getElementById('sidebar');
+      aside.classList.toggle('open');
+    }
+
+    // Функция для отображения информации об участнике
+    function showParticipantInfo(name) {
+      alert(`Информация о ${name}: Здесь будет информация о ${name}.`);
+    }
+
+    // Функция добавляет события на элементы списка участников
+    const participants = document.querySelectorAll('#sidebar p');
+    participants.forEach((participant) => {
+      participant.addEventListener('click', (e) => {
+        const name = e.target.innerText.trim();
+        showParticipantInfo(name);
+      });
+    });
+  </script>
+</body>
+
+</html>
